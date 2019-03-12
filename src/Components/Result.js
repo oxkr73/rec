@@ -17,7 +17,7 @@ class Result extends Component {
           if (item.value === "Header1Logo") {
             return <Header1Logo key={key} />;
           }
-          return "No items";
+          return `${item.value} not found`;
         })}
       </div>
     );
