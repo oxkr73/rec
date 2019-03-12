@@ -21,13 +21,13 @@ class Header1Logo extends Component {
     console.log(this.props);
     return (
       <table
-        width={this.props.mainAttr.width}
+        width="{this.props.mainAttr.width}"
         border="0"
         cellPadding="0"
         cellSpacing="0"
-        align={this.props.mainAttr.horzAlign}
+        align="{this.props.mainAttr.horzAlign}"
         className="deviceWidth"
-        onClick={this.props.onClick}
+        onClick="{this.props.onClick}"
         style={this.TableStyle}
       >
         <tbody>

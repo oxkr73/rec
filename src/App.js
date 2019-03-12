@@ -6,14 +6,17 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    result: []
+    result: [],
+    stack: []
   };
   addToResult = item => {
-    console.log("adding", item);
+    //console.log("adding", item);
     const currentResult = [...this.state.result, item.html];
-    console.log(currentResult);
+    const currentStack = [...this.state.stack, item];
+    //console.log(currentResult);
     this.setState({
-      result: currentResult
+      result: currentResult,
+      stack: currentStack
     });
   };
   render() {
@@ -22,7 +25,7 @@ class App extends Component {
       <div className="App">
         <BlocksGrid blocks={Blocks} addToResult={this.addToResult} />
         <hr />
-        <Result result={this.state.result} />
+        <Result result={this.state.result} stack={this.state.stack} />
       </div>
     );
   }
