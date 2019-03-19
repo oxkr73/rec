@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Header2Logo extends Component {
+class Row2Logo extends Component {
   state = {};
   TdStyleLeft = {
     padding: "10px 20px",
@@ -14,18 +14,37 @@ class Header2Logo extends Component {
     display: "block",
     margin: 0
   };
+
+  handleClick = e => {
+    e.preventDefault();
+    const newProps = {
+      blockId: this.props.id,
+      newProps: this.props.blockProps
+    };
+    this.props.openModal(newProps);
+  };
+
   render() {
     return (
       <table
-        width={this.props.mainAttr.width}
+        id={this.props.id}
+        width={this.props.globals.globalWidth}
         border="0"
         cellPadding="0"
         cellSpacing="0"
-        align={this.props.mainAttr.horzAlign}
+        align={this.props.globals.globalAlign}
+        bgcolor={this.props.globals.globalTableBkg}
         className="deviceWidth"
-        onClick={this.props.onClick}
-        //style="margin:0 auto;"
+        //onClick={this.props.onClick}
+        style={{ margin: "0 auto" }}
       >
+        <div
+          className="edit-layer"
+          style={{ width: this.props.globals.globalWidth + "px" }}
+        >
+          <button onClick={this.handleClick}>Edit</button>
+          <button>Remove</button>
+        </div>
         <tbody>
           <tr>
             <td width="100%" bgcolor="#ffffff">
@@ -81,4 +100,4 @@ class Header2Logo extends Component {
   }
 }
 
-export default Header2Logo;
+export default Row2Logo;

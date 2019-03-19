@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Block from "./Block";
+
 class BlocksGrid extends Component {
   state = {};
   render() {

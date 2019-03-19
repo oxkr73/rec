@@ -1,25 +1,79 @@
 import React, { Component } from "react";
-import Header1Logo from "./Blocks/Header1Logo";
+import Row1Logo from "./Blocks/Row1Logo";
+import Row2Logo from "./Blocks/Row2Logo";
+import FullWidthImage from "./Blocks/FullWidthImage";
 
 class Result extends Component {
   state = {};
+
   render() {
-    const inHTML = this.props.result.join("");
-    console.log(this.props.stack);
     return (
-      //   <div
-      //     dangerouslySetInnerHTML={{
-      //       __html: inHTML
-      //     }}
-      //   />
-      <div>
-        {this.props.stack.map((item, key) => {
-          if (item.value === "Header1Logo") {
-            return <Header1Logo key={key} />;
-          }
-          return `${item.value} not found`;
-        })}
-      </div>
+      <table
+        id="mainTable"
+        width="100%"
+        border="0"
+        cellPadding="0"
+        cellSpacing="0"
+        align="center"
+      >
+        <tbody>
+          <tr>
+            <td
+              width="100%"
+              valign="top"
+              bgcolor={this.props.globals.globalBkg}
+              style={{
+                paddingTop: this.props.globals.bodyPaddingTop + "px",
+                paddingBottom: this.props.globals.bodyPaddingBottom + "px"
+              }}
+            >
+              {this.props.stack.map((item, key) => {
+                if (item.value === "Row1Logo") {
+                  return (
+                    <Row1Logo
+                      key={key + item.slug}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                    />
+                  );
+                }
+                if (item.value === "Row2Logo") {
+                  return (
+                    <Row2Logo
+                      key={key + item.slug}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                    />
+                  );
+                }
+                if (item.value === "FullWidthImage") {
+                  return (
+                    <FullWidthImage
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                    />
+                  );
+                }
+
+                return (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `${item.value} not found <br>`
+                    }}
+                  />
+                );
+              })}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     );
   }
 }

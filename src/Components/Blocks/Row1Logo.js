@@ -1,51 +1,63 @@
 import React, { Component } from "react";
 
-class Header1Logo extends Component {
+class Row1Logo extends Component {
   state = {};
   SelfAttr = {
-    innerBgColor: "red",
-    innerAlign: "left"
-  };
-  TableStyle = {
-    margin: "0 auto"
+    innerBgColor: this.props.blockProps.bkgColor,
+    innerAlign: this.props.blockProps.align
   };
   TdStyle = {
-    padding: "10px 20px",
-    "text-align": "right"
+    padding: this.props.blockProps.padding,
+    textAlign: this.props.blockProps.align
   };
   ImgStyle = {
     display: "block",
     margin: 0
   };
+
+  handleClick = e => {
+    e.preventDefault();
+    const newProps = {
+      blockId: this.props.id,
+      newProps: this.props.blockProps
+    };
+    this.props.openModal(newProps);
+  };
+
   render() {
-    console.log(this.props);
     return (
       <table
-        width="{this.props.mainAttr.width}"
+        id={this.props.id}
+        width={this.props.globals.globalWidth}
         border="0"
         cellPadding="0"
         cellSpacing="0"
-        align="{this.props.mainAttr.horzAlign}"
+        align={this.props.globals.globalAlign}
+        bgcolor={this.props.globals.globalTableBkg}
         className="deviceWidth"
-        onClick="{this.props.onClick}"
-        style={this.TableStyle}
+        //onClick="{this.props.onClick}"
+        style={{ margin: "0 auto" }}
       >
         <tbody>
+          <div
+            className="edit-layer"
+            style={{ width: this.props.globals.globalWidth + "px" }}
+          >
+            <button onClick={this.handleClick}>Edit</button>
+            <button>Remove</button>
+          </div>
           <tr>
             <td width="100%" bgcolor={this.SelfAttr.innerBgColor}>
               <table
                 border="0"
                 cellPadding="0"
                 cellSpacing="0"
-                align="right"
+                align={this.props.blockProps.align}
                 className="deviceWidth"
               >
                 <tbody>
                   <tr>
-                    <td
-                      style={{ padding: "30px 30px", "text-align": "right" }}
-                      className="right"
-                    >
+                    <td style={this.TdStyle} className="right">
                       <a href="/">
                         <img
                           src="https://placehold.it/120x40?text=LOGO"
@@ -66,4 +78,4 @@ class Header1Logo extends Component {
   }
 }
 
-export default Header1Logo;
+export default Row1Logo;
