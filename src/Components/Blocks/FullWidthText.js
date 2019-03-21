@@ -5,7 +5,7 @@ class FullWidthText extends Component {
     render() {
         return (
             <table
-                width="580"
+                width="600"
                 className="deviceWidth"
                 border="0"
                 cellPadding="0"
@@ -15,7 +15,7 @@ class FullWidthText extends Component {
                 style={{ margin: "0 auto;" }} >
 
                 <tr>
-                    <td style={{ fontSize: "13px", color: "#959595", fontWeight: "normal", textAlign: "left", fontFamily: "Georgia, Times, serif", lineHeight: "24px", verticalAlign: "top", padding: "10px 8px 10px 8px" }} bgcolor="#eeeeed">
+                    <td style={{ fontSize: "14px", color: "#000000", fontWeight: "normal", textAlign: "left", fontFamily: "Arial, Helvetica, sans-serif", lineHeight: "16px", verticalAlign: "top", padding: "15px" }} bgcolor="#ffffff">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </td>
                 </tr>
