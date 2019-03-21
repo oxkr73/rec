@@ -9,21 +9,22 @@ class FullWidthImage extends Component {
   render() {
     return (
       <table
-        width={this.props.mainAttr.width}
+        id={this.props.id}
+        width={this.props.globals.globalWidth}
         border="0"
         cellPadding="0"
         cellSpacing="0"
-        align={this.props.mainAttr.horzAlign}
+        align="{this.props.mainAttr.horzAlign}"
         bgcolor="#eeeeed"
         className="deviceWidth"
-        onClick={this.props.onClick}
-        //style="margin:0 auto;"
+        //onClick={this.props.onClick}
+        style={{ margin: "0 auto" }}
       >
         <tbody>
           <tr>
             <td
               valign="top"
-              //style="padding:0"
+              style={{ padding: 0 }}
               bgcolor="#ffffff"
             >
               <a href="/">

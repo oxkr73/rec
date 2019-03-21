@@ -3,12 +3,12 @@ import React, { Component } from "react";
 class Row2Logo extends Component {
   state = {};
   TdStyleLeft = {
-    padding: "10px 20px",
-    "text-align": "left"
+    padding: "15px",
+    textAlign: "left"
   };
   TdStyleRight = {
-    padding: "10px 20px",
-    "text-align": "right"
+    padding: "15px",
+    textAlign: "right"
   };
   ImgStyle = {
     display: "block",
@@ -52,7 +52,7 @@ class Row2Logo extends Component {
                 border="0"
                 cellPadding="0"
                 cellSpacing="0"
-                align={this.TdStyleLeft["text-align"]}
+                align={this.TdStyleLeft["textAlign"]}
                 className="deviceWidth"
               >
                 <tbody>

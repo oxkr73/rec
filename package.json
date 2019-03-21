@@ -1,8 +1,9 @@
 {
-  "name": "r-email-creator",
+  "name": "rec",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "npm": "^6.9.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"

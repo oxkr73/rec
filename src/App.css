@@ -1,9 +1,10 @@
 .edit-layer {
   display: none;
-  border: 1px solid #000000;
 }
-
-table:hover .edit-layer {
+.edit-layer button{
+  margin-right: 15px;
+}
+#mainTable tr td table:hover .edit-layer {
   display: block;
   position: absolute;
 }

@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+import './Result.css'
 import Row1Logo from "./Blocks/Row1Logo";
 import Row2Logo from "./Blocks/Row2Logo";
 import FullWidthImage from "./Blocks/FullWidthImage";
+import FullWidthText from "./Blocks/FullWidthText";
+import Spacer from "./Blocks/Spacer";
+import Row1Button from "./Blocks/Row1Button";
 
 class Result extends Component {
   state = {};
@@ -53,6 +57,39 @@ class Result extends Component {
                 if (item.value === "FullWidthImage") {
                   return (
                     <FullWidthImage
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                    />
+                  );
+                }
+                if (item.value === "FullWidthText") {
+                  return (
+                    <FullWidthText
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                    />
+                  );
+                }
+                if (item.value === "Spacer") {
+                  return (
+                    <Spacer
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                    />
+                  );
+                }
+                if (item.value === "Row1Button") {
+                  return (
+                    <Row1Button
                       key={key}
                       id={key + "-" + item.slug}
                       globals={this.props.globals}
