@@ -65,7 +65,7 @@ class Globals extends Component {
           />
         </div>
         <div className="form-group">
-          <label>Body Padding Bootm</label>
+          <label>Body Padding Bottom</label>
           <input
             ref={this.bodyPaddingBottom}
             type="number"

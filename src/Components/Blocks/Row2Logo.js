@@ -38,13 +38,6 @@ class Row2Logo extends Component {
         //onClick={this.props.onClick}
         style={{ margin: "0 auto" }}
       >
-        <div
-          className="edit-layer"
-          style={{ width: this.props.globals.globalWidth + "px" }}
-        >
-          <button onClick={this.handleClick}>Edit</button>
-          <button>Remove</button>
-        </div>
         <tbody>
           <tr>
             <td width="100%" bgcolor="#ffffff">

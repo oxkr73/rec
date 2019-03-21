@@ -54,7 +54,12 @@ const Blocks = [{
     label: "Spacer",
     value: "Spacer",
     slug: "SPC",
-    html: '<table width="600" class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" style="margin:0 auto;"><tr><td height="15" style="font-size: 15px; line-height: 15px;"></td></tr></table>',
+    html: `<table width="600" class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff"
+              style="margin:0 auto;">
+              <tr>
+                <td height="15" style="font-size: 15px; line-height: 15px;"></td>
+              </tr>
+            </table>`,
     blockProps: {
       height: "15"}
   },

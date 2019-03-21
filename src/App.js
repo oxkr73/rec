@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Globals from "./Components/Globals";
 import Blocks from "./data";
+import Layout from "./dataLayout";
 import BlocksGrid from "./Components/BlocksGrid";
 import Result from "./Components/Result";
 import Modal from "./Components/Modal/Modal";
@@ -12,7 +13,9 @@ class App extends Component {
     result: [],
     stack: [],
     modalModProps: {},
-    isModalOpen: false
+    isModalOpen: false,
+    showCode: false,
+    finalCode: ''
   };
 
   openModalHandler = item => {
@@ -32,19 +35,43 @@ class App extends Component {
   addToResult = item => {
     const currentResult = [...this.state.result, item.html];
     const currentStack = [...this.state.stack, item];
+
+    const Head = Layout.Head;
+    const Footer = Layout.Footer;
+    const finalCode = Head + currentResult + Footer;
+
     this.setState({
       result: currentResult,
-      stack: currentStack
+      stack: currentStack,
+      finalCode
     });
   };
+
   addToGlobal = values => {
     const currentGlobal = values;
     this.setState({
       globals: currentGlobal
     });
   };
+
+  handleShowCode = () => {
+    const showCode = !this.state.showCode;
+    this.setState({
+      showCode
+    });
+
+  }
+
+  showCode = () => {
+    const Head = Layout.Head;
+    const Footer = Layout.Footer;
+    const finalCode = Head + this.state.result + Footer;
+    console.log(finalCode);
+
+    return finalCode;
+  }
+
   render() {
-    console.log(this.state.globals);
     return (
       <div className="App">
         <Globals addToGlobal={this.addToGlobal} />
@@ -58,6 +85,16 @@ class App extends Component {
           stack={this.state.stack}
           openModal={this.openModalHandler}
         />
+
+        <button onClick={this.handleShowCode}>
+          Show Code
+          </button>
+
+        {this.state.showCode ? (
+          <div><br/>
+            {this.state.finalCode}
+          </div>) : null}
+
         {this.state.isModalOpen ? (
           <div onClick={this.closeModalHandler} className="back-drop" />
         ) : null}

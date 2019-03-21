@@ -39,13 +39,6 @@ class Row1Logo extends Component {
         style={{ margin: "0 auto" }}
       >
         <tbody>
-          <div
-            className="edit-layer"
-            style={{ width: this.props.globals.globalWidth + "px" }}
-          >
-            <button onClick={this.handleClick}>Edit</button>
-            <button>Remove</button>
-          </div>
           <tr>
             <td width="100%" bgcolor={this.SelfAttr.innerBgColor}>
               <table
