@@ -16,7 +16,7 @@ class FullWidthImage extends Component {
         cellSpacing="0"
         align="{this.props.mainAttr.horzAlign}"
         bgcolor="#eeeeed"
-        className="deviceWidth"
+        className={this.props.globals.isResponsive ? "deviceWidth" : null}
         //onClick={this.props.onClick}
         style={{ margin: "0 auto" }}
       >
@@ -29,7 +29,7 @@ class FullWidthImage extends Component {
             >
               <a href="/">
                 <img
-                  className="deviceWidth"
+                  className={this.props.globals.isResponsive ? "deviceWidth" : null}
                   src="https://placehold.it/580x150?text=BANNER"
                   alt=""
                   border="0"

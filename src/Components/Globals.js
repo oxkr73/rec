@@ -20,7 +20,7 @@ class Globals extends Component {
       bodyPaddingTop: this.bodyPaddingTop.current.value,
       bodyPaddingBottom: this.bodyPaddingBottom.current.value,
       globalAlign: this.globalAlign.current.value,
-      isResponsive: this.isResponsive.current.value
+      isResponsive: this.isResponsive.current.checked
     };
 
     this.props.addToGlobal(globalValues);

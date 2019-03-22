@@ -19,7 +19,6 @@ class App extends Component {
   };
 
   openModalHandler = item => {
-    console.log(item);
     this.setState({
       isModalOpen: true,
       modalModProps: item.newProps
@@ -64,8 +63,9 @@ class App extends Component {
 
   showCode = () => {
     const Head = Layout.Head;
+    const HeadResponsive = Layout.HeadResponsive;
     const Footer = Layout.Footer;
-    const finalCode = Head + this.state.result + Footer;
+    const finalCode = this.state.globals.isResponsive ? HeadResponsive : Head + this.state.result + Footer;
     console.log(finalCode);
 
     return finalCode;
@@ -85,13 +85,13 @@ class App extends Component {
           stack={this.state.stack}
           openModal={this.openModalHandler}
         />
-
+        <br />
         <button onClick={this.handleShowCode}>
           Show Code
           </button>
 
         {this.state.showCode ? (
-          <div><br/>
+          <div><br />
             {this.state.finalCode}
           </div>) : null}
 

@@ -34,7 +34,7 @@ class Row1Logo extends Component {
         cellSpacing="0"
         align={this.props.globals.globalAlign}
         bgcolor={this.props.globals.globalTableBkg}
-        className="deviceWidth"
+        className={this.props.globals.isResponsive ? "deviceWidth" : null}
         //onClick="{this.props.onClick}"
         style={{ margin: "0 auto" }}
       >
@@ -46,14 +46,14 @@ class Row1Logo extends Component {
                 cellPadding="0"
                 cellSpacing="0"
                 align={this.props.blockProps.align}
-                className="deviceWidth"
+                className={this.props.globals.isResponsive ? "deviceWidth" : null}
               >
                 <tbody>
                   <tr>
                     <td style={this.TdStyle} className="right">
                       <a href="/">
                         <img
-                          src="https://placehold.it/120x40?text=LOGO"
+                          src="https://placehold.it/120x40?text=IMAGE"
                           alt=""
                           border="0"
                           style={this.ImgStyle}
