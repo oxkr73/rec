@@ -35,7 +35,6 @@ class Row2Logo extends Component {
         align={this.props.globals.globalAlign}
         bgcolor={this.props.globals.globalTableBkg}
         className={this.props.globals.isResponsive ? "deviceWidth" : null}
-        //onClick={this.props.onClick}
         style={{ margin: "0 auto" }}
       >
         <tbody>
@@ -46,7 +45,9 @@ class Row2Logo extends Component {
                 cellPadding="0"
                 cellSpacing="0"
                 align={this.TdStyleLeft["textAlign"]}
-                className={this.props.globals.isResponsive ? "deviceWidth" : null}
+                className={
+                  this.props.globals.isResponsive ? "deviceWidth" : null
+                }
               >
                 <tbody>
                   <tr>
@@ -68,7 +69,9 @@ class Row2Logo extends Component {
                 cellPadding="0"
                 cellSpacing="0"
                 align="right"
-                className={this.props.globals.isResponsive ? "deviceWidth" : null}
+                className={
+                  this.props.globals.isResponsive ? "deviceWidth" : null
+                }
               >
                 <tbody>
                   <tr>

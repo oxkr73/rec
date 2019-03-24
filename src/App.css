@@ -1,10 +1,14 @@
 .edit-layer {
   display: none;
 }
-.edit-layer button{
+.edit-layer button {
   margin-right: 15px;
 }
 #mainTable tr td table:hover .edit-layer {
   display: block;
+  position: absolute;
+}
+
+.edit-button {
   position: absolute;
 }

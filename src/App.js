@@ -15,7 +15,7 @@ class App extends Component {
     modalModProps: {},
     isModalOpen: false,
     showCode: false,
-    finalCode: ''
+    finalCode: ""
   };
 
   openModalHandler = item => {
@@ -46,6 +46,11 @@ class App extends Component {
     });
   };
 
+  updateResult = data => {
+    const currentResult = this.state.result;
+    console.log(data, currentResult);
+  };
+
   addToGlobal = values => {
     const currentGlobal = values;
     this.setState({
@@ -58,18 +63,19 @@ class App extends Component {
     this.setState({
       showCode
     });
-
-  }
+  };
 
   showCode = () => {
     const Head = Layout.Head;
     const HeadResponsive = Layout.HeadResponsive;
     const Footer = Layout.Footer;
-    const finalCode = this.state.globals.isResponsive ? HeadResponsive : Head + this.state.result + Footer;
+    const finalCode = this.state.globals.isResponsive
+      ? HeadResponsive
+      : Head + this.state.result + Footer;
     console.log(finalCode);
 
     return finalCode;
-  }
+  };
 
   render() {
     return (
@@ -84,16 +90,17 @@ class App extends Component {
           result={this.state.result}
           stack={this.state.stack}
           openModal={this.openModalHandler}
+          updateResult={this.updateResult}
         />
         <br />
-        <button onClick={this.handleShowCode}>
-          Show Code
-          </button>
+        <button onClick={this.handleShowCode}>Show Code</button>
 
         {this.state.showCode ? (
-          <div><br />
+          <div>
+            <br />
             {this.state.finalCode}
-          </div>) : null}
+          </div>
+        ) : null}
 
         {this.state.isModalOpen ? (
           <div onClick={this.closeModalHandler} className="back-drop" />

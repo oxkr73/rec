@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './Result.css'
+import "./Result.css";
 import Row1Logo from "./Blocks/Row1Logo";
 import Row2Logo from "./Blocks/Row2Logo";
 import FullWidthImage from "./Blocks/FullWidthImage";
@@ -40,6 +40,7 @@ class Result extends Component {
                       globals={this.props.globals}
                       blockProps={item.blockProps}
                       openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
                     />
                   );
                 }
@@ -51,6 +52,7 @@ class Result extends Component {
                       globals={this.props.globals}
                       blockProps={item.blockProps}
                       openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
                     />
                   );
                 }
@@ -62,6 +64,7 @@ class Result extends Component {
                       globals={this.props.globals}
                       blockProps={item.blockProps}
                       openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
                     />
                   );
                 }
@@ -73,6 +76,7 @@ class Result extends Component {
                       globals={this.props.globals}
                       blockProps={item.blockProps}
                       openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
                     />
                   );
                 }
@@ -84,6 +88,7 @@ class Result extends Component {
                       globals={this.props.globals}
                       blockProps={item.blockProps}
                       openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
                     />
                   );
                 }
@@ -95,6 +100,7 @@ class Result extends Component {
                       globals={this.props.globals}
                       blockProps={item.blockProps}
                       openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
                     />
                   );
                 }
