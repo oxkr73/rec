@@ -48,9 +48,6 @@ class Row1Button extends Component {
                                 cellPadding="0"
                                 cellSpacing="0"
                                 align="center"
-                                className={
-                                    this.props.globals.isResponsive ? "deviceWidth" : null
-                                }
                             >
                                 <tbody>
                                     <tr>
