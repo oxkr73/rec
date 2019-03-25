@@ -1,8 +1,14 @@
 const Layout = {
     Head: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" mlns:o="urn:schemas-microsoft-com:office:office">
     <head>    
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+        <!--[if gte mso 9]><xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml><![endif]-->  
         <title>Responsive Email Creator by USACD</title>    
         <style type="text/css">
             .ReadMsgBody {
@@ -29,11 +35,17 @@ const Layout = {
             }
         </style>
     </head>    
-    <body style="font-family: Arial, Helvetica, sans-serif">`,
+    <body style="margin:0;padding:0;min-width:100%;background-color:#ffffff;font-family: Arial, Helvetica, sans-serif">`,
     HeadResponsive: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml">
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" mlns:o="urn:schemas-microsoft-com:office:office">
     <head>    
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />    
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+        <!--[if gte mso 9]><xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml><![endif]-->  
         <title>Responsive Email Created by USACD</title>    
         <style type="text/css">
             .ReadMsgBody {
@@ -82,7 +94,7 @@ const Layout = {
             }
         </style>
     </head>    
-    <body style="font-family: Arial, Helvetica, sans-serif">`,
+    <body style="margin:0;padding:0;min-width:100%;background-color:#ffffff;font-family: Arial, Helvetica, sans-serif">`,
     Footer: `<div style="display:none; white-space:nowrap; font:15px courier; color:#ffffff;">
 		- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         </div>

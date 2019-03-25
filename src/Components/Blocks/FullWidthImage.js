@@ -1,12 +1,34 @@
 import React, { Component } from "react";
 
 class FullWidthImage extends Component {
-  state = {};
+  state = {
+    isRemoveVisible: false
+  };
+  handleShow = () => {
+    this.setState({
+      isRemoveVisible: true
+    });
+  };
+  handleHide = () => {
+    this.setState({
+      isRemoveVisible: false
+    });
+  };
   ImgStyle = {
     display: "block",
     margin: 0
   };
+
+  handleRemove = e => {
+    this.props.updateResult(this.props.id);
+  };
+
   render() {
+    let removeBtn = this.state.isRemoveVisible ? (
+      <div className="edit-button">
+        <button onClick={this.handleRemove}>Remove</button>
+      </div>
+    ) : null;
     return (
       <table
         id={this.props.id}
@@ -21,7 +43,10 @@ class FullWidthImage extends Component {
       >
         <tbody>
           <tr>
-            <td valign="top" style={{ padding: 0 }} bgcolor="#ffffff">
+            <td valign="top" style={{ padding: 0 }} bgcolor="#ffffff"
+              onMouseOver={this.handleShow}
+              onMouseLeave={this.handleHide}>
+              {removeBtn}
               <a href="/">
                 <img
                   className={

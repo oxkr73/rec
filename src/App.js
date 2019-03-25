@@ -35,20 +35,24 @@ class App extends Component {
     const currentResult = [...this.state.result, item.html];
     const currentStack = [...this.state.stack, item];
 
-    const Head = Layout.Head;
-    const Footer = Layout.Footer;
-    const finalCode = Head + currentResult + Footer;
-
     this.setState({
       result: currentResult,
-      stack: currentStack,
-      finalCode
+      stack: currentStack
     });
   };
 
   updateResult = data => {
+    const idx = Number(data.charAt(0));
     const currentResult = this.state.result;
-    console.log(data, currentResult);
+    const currentStack = this.state.stack;
+
+    currentResult.splice(idx, 1);
+    currentStack.splice(idx, 1);
+
+    this.setState({
+      result: currentResult,
+      stack: currentStack
+    });
   };
 
   addToGlobal = values => {
@@ -60,19 +64,24 @@ class App extends Component {
 
   handleShowCode = () => {
     const showCode = !this.state.showCode;
+    const finalCode = this.resultCode();
+
     this.setState({
-      showCode
+      showCode,
+      finalCode
     });
+
   };
 
-  showCode = () => {
+  resultCode = () => {
     const Head = Layout.Head;
     const HeadResponsive = Layout.HeadResponsive;
+    const bodyResult = this.state.result.join("");
     const Footer = Layout.Footer;
+
     const finalCode = this.state.globals.isResponsive
-      ? HeadResponsive
-      : Head + this.state.result + Footer;
-    console.log(finalCode);
+      ? HeadResponsive + bodyResult + Footer
+      : Head + bodyResult + Footer;
 
     return finalCode;
   };
@@ -93,7 +102,7 @@ class App extends Component {
           updateResult={this.updateResult}
         />
         <br />
-        <button onClick={this.handleShowCode}>Show Code</button>
+        <button onClick={this.handleShowCode}>Transpile</button>
 
         {this.state.showCode ? (
           <div>

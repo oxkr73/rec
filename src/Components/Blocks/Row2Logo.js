@@ -1,7 +1,19 @@
 import React, { Component } from "react";
 
 class Row2Logo extends Component {
-  state = {};
+  state = {
+    isRemoveVisible: false
+  };
+  handleShow = () => {
+    this.setState({
+      isRemoveVisible: true
+    });
+  };
+  handleHide = () => {
+    this.setState({
+      isRemoveVisible: false
+    });
+  };
   TdStyleLeft = {
     padding: "15px",
     textAlign: "left"
@@ -24,7 +36,16 @@ class Row2Logo extends Component {
     this.props.openModal(newProps);
   };
 
+  handleRemove = e => {
+    this.props.updateResult(this.props.id);
+  };
+
   render() {
+    let removeBtn = this.state.isRemoveVisible ? (
+      <div className="edit-button">
+        <button onClick={this.handleRemove}>Remove</button>
+      </div>
+    ) : null;
     return (
       <table
         id={this.props.id}
@@ -39,7 +60,10 @@ class Row2Logo extends Component {
       >
         <tbody>
           <tr>
-            <td width="100%" bgcolor="#ffffff">
+            <td width="100%" bgcolor="#ffffff"
+              onMouseOver={this.handleShow}
+              onMouseLeave={this.handleHide}>
+              {removeBtn}
               <table
                 border="0"
                 cellPadding="0"

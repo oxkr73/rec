@@ -1,8 +1,30 @@
 import React, { Component } from "react";
 
 class FullWidthText extends Component {
-  state = {};
+  state = {
+    isRemoveVisible: false
+  };
+  handleShow = () => {
+    this.setState({
+      isRemoveVisible: true
+    });
+  };
+  handleHide = () => {
+    this.setState({
+      isRemoveVisible: false
+    });
+  };
+
+  handleRemove = e => {
+    this.props.updateResult(this.props.id);
+  };
+
   render() {
+    let removeBtn = this.state.isRemoveVisible ? (
+      <div className="edit-button">
+        <button onClick={this.handleRemove}>Remove</button>
+      </div>
+    ) : null;
     return (
       <table
         id={this.props.id}
@@ -29,7 +51,10 @@ class FullWidthText extends Component {
                 padding: "15px"
               }}
               bgcolor="#ffffff"
+              onMouseOver={this.handleShow}
+              onMouseLeave={this.handleHide}
             >
+              {removeBtn}
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Exercitation ullamco laboris nisi ut aliquip ex ea commodo

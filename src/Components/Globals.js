@@ -19,7 +19,7 @@ class Globals extends Component {
       globalWidth: this.globalWidth.current.value,
       bodyPaddingTop: this.bodyPaddingTop.current.value,
       bodyPaddingBottom: this.bodyPaddingBottom.current.value,
-      globalAlign: this.globalAlign.current.value,
+      globalAlign: "center",//this.globalAlign.current.value,
       isResponsive: this.isResponsive.current.checked
     };
 
@@ -73,7 +73,7 @@ class Globals extends Component {
             defaultValue="15"
           />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label>Align</label>
           <select
             ref={this.globalAlign}
@@ -84,7 +84,7 @@ class Globals extends Component {
             <option value="left">left</option>
             <option value="right">right</option>
           </select>
-        </div>
+        </div> */}
         <div className="form-group">
           <label>Responsive</label>
           <input

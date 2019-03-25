@@ -38,7 +38,6 @@ class Row1Logo extends Component {
   };
 
   handleRemove = e => {
-    //console.log(this.props.id);
     this.props.updateResult(this.props.id);
   };
 

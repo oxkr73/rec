@@ -14,6 +14,9 @@ class Spacer extends Component {
       isRemoveVisible: false
     });
   };
+  handleRemove = e => {
+    this.props.updateResult(this.props.id);
+  };
   render() {
     let removeBtn = this.state.isRemoveVisible ? (
       <div>
@@ -31,13 +34,15 @@ class Spacer extends Component {
         bgcolor={this.props.globals.globalTableBkg}
         className={this.props.globals.isResponsive ? "deviceWidth" : null}
         style={{ margin: "0 auto" }}
-        onMouseEnter={this.handleShow}
-        onMouseOut={this.handleHide}
       >
         <tbody>
           <tr>
-            <td height="15" style={{ fontSize: "15px", lineHeight: "15px" }}>
+            <td height="15" style={{ fontSize: "15px", lineHeight: "15px" }}
+              onMouseEnter={this.handleShow}
+            //onMouseOut={this.handleHide}
+            >
               {removeBtn}
+              &nbsp;
             </td>
           </tr>
         </tbody>
