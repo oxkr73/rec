@@ -26,7 +26,7 @@ class FullWidthImage extends Component {
   render() {
     let removeBtn = this.state.isRemoveVisible ? (
       <div className="edit-button">
-        <button onClick={this.handleRemove}>Remove</button>
+        <button className="btn-floating btn-small waves-effect red" onClick={this.handleRemove}>&times;</button>
       </div>
     ) : null;
     return (
@@ -52,7 +52,7 @@ class FullWidthImage extends Component {
                   className={
                     this.props.globals.isResponsive ? "deviceWidth" : null
                   }
-                  src="https://placehold.it/580x150?text=IMAGE"
+                  src="https://placehold.it/600x150?text=IMAGE"
                   alt=""
                   border="0"
                   width="100%"

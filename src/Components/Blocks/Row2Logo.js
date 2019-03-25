@@ -23,8 +23,8 @@ class Row2Logo extends Component {
     textAlign: "right"
   };
   ImgStyle = {
-    display: "block",
-    margin: 0
+    margin: 0,
+    border: 0
   };
 
   handleClick = e => {
@@ -43,7 +43,7 @@ class Row2Logo extends Component {
   render() {
     let removeBtn = this.state.isRemoveVisible ? (
       <div className="edit-button">
-        <button onClick={this.handleRemove}>Remove</button>
+        <button className="btn-floating btn-small waves-effect red" onClick={this.handleRemove}>&times;</button>
       </div>
     ) : null;
     return (
@@ -65,17 +65,15 @@ class Row2Logo extends Component {
               onMouseLeave={this.handleHide}>
               {removeBtn}
               <table
+                width="49%"
                 border="0"
                 cellPadding="0"
                 cellSpacing="0"
                 align={this.TdStyleLeft["textAlign"]}
-                className={
-                  this.props.globals.isResponsive ? "deviceWidth" : null
-                }
               >
                 <tbody>
                   <tr>
-                    <td style={this.TdStyleLeft} className="left">
+                    <td style={{ padding: "15px", textAlign: "left" }} className="left">
                       <a href="/">
                         <img
                           src="https://placehold.it/120x40?text=IMAGE"
@@ -89,17 +87,15 @@ class Row2Logo extends Component {
                 </tbody>
               </table>
               <table
+                width="49%"
                 border="0"
                 cellPadding="0"
                 cellSpacing="0"
                 align="right"
-                className={
-                  this.props.globals.isResponsive ? "deviceWidth" : null
-                }
               >
                 <tbody>
                   <tr>
-                    <td style={this.TdStyleRight} className="right">
+                    <td style={{ padding: "15px", textAlign: "right" }} className="right">
                       <a href="/">
                         <img
                           src="https://placehold.it/120x40?text=IMAGE"

@@ -22,7 +22,7 @@ class FullWidthText extends Component {
   render() {
     let removeBtn = this.state.isRemoveVisible ? (
       <div className="edit-button">
-        <button onClick={this.handleRemove}>Remove</button>
+        <button className="btn-floating btn-small waves-effect red" onClick={this.handleRemove}>&times;</button>
       </div>
     ) : null;
     return (

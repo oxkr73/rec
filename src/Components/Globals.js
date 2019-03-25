@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import M from "materialize-css";
+import "../../node_modules/materialize-css/dist/css/materialize.css"
 
 class Globals extends Component {
   state = {};
@@ -25,55 +27,70 @@ class Globals extends Component {
 
     this.props.addToGlobal(globalValues);
   };
+
+  componentDidMount() {
+    M.AutoInit();
+  }
+
   render() {
     return (
-      <form onSubmit={this.modifyGlobal}>
-        <div className="form-group">
-          <label>Background color</label>
-          <input
-            ref={this.globalBkg}
-            type="color"
-            name="global-bkg"
-            defaultValue="#dedede"
-          />
-        </div>
-        <div className="form-group">
-          <label>Table bkg color</label>
-          <input
-            ref={this.globalTableBkg}
-            type="color"
-            name="global-table-color"
-            defaultValue="#ffffff"
-          />
-        </div>
-        <div className="form-group">
-          <label>Width</label>
-          <input
-            ref={this.globalWidth}
-            type="number"
-            name="global-width"
-            defaultValue="600"
-          />
-        </div>
-        <div className="form-group">
-          <label>Body Padding Top</label>
-          <input
-            ref={this.bodyPaddingTop}
-            type="number"
-            name="body-pad-top"
-            defaultValue="15"
-          />
-        </div>
-        <div className="form-group">
-          <label>Body Padding Bottom</label>
-          <input
-            ref={this.bodyPaddingBottom}
-            type="number"
-            name="body-pad-bottom"
-            defaultValue="15"
-          />
-        </div>
-        {/* <div className="form-group">
+      <div className="row">
+        <form className="col s12" onSubmit={this.modifyGlobal}>
+          <div className="row">
+            <div className="input-field col s4">
+              <input
+                ref={this.globalBkg}
+                id="global-bkg"
+                type="text"
+                name="global-bkg"
+                defaultValue="#dedede"
+              />
+              <label htmlFor="global-bkg">Background color</label>
+            </div>
+            <div className="input-field col s4">
+              <input
+                ref={this.globalTableBkg}
+                id="global-table-color"
+                type="text"
+                name="global-table-color"
+                defaultValue="#ffffff"
+              />
+              <label htmlFor="global-table-color">Table bkg color</label>
+            </div>
+            <div className="input-field col s4">
+              <input
+                ref={this.globalWidth}
+                id="global-width"
+                type="number"
+                name="global-width"
+                defaultValue="600"
+              />
+              <label htmlFor="global-width">Width</label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="input-field col s4">
+              <input
+                ref={this.bodyPaddingTop}
+                id="body-pad-top"
+                type="number"
+                name="body-pad-top"
+                defaultValue="15"
+              />
+              <label htmlFor="body-pad-top">Body Padding Top</label>
+            </div>
+            <div className="input-field col s4">
+              <input
+                ref={this.bodyPaddingBottom}
+                id="body-pad-bottom"
+                type="number"
+                name="body-pad-bottom"
+                defaultValue="15"
+              />
+              <label htmlFor="body-pad-bottom">Body Padding Bottom</label>
+            </div>
+            {/* <div className="form-group">
           <label>Align</label>
           <select
             ref={this.globalAlign}
@@ -85,17 +102,27 @@ class Globals extends Component {
             <option value="right">right</option>
           </select>
         </div> */}
-        <div className="form-group">
-          <label>Responsive</label>
-          <input
-            ref={this.isResponsive}
-            type="checkbox"
-            name="responsive"
-            defaultChecked="true"
-          />
-        </div>
-        <button>Apply</button>
-      </form>
+            <div className="col s4">
+              <label>
+                <input
+                  ref={this.isResponsive}
+                  id="responsive"
+                  type="checkbox"
+                  name="responsive"
+                  defaultChecked="true"
+                  className="filled-in"
+                />
+                <span htmlFor="responsive">Responsive</span>
+              </label>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col s12">
+              <button className="btn waves-effect">Apply</button>
+            </div>
+          </div>
+        </form>
+      </div>
     );
   }
 }

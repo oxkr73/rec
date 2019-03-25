@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Globals from "./Components/Globals";
-import Blocks from "./data";
+import DataBlocks from "./data";
 import Layout from "./dataLayout";
 import BlocksGrid from "./Components/BlocksGrid";
 import Result from "./Components/Result";
@@ -88,28 +88,38 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Globals addToGlobal={this.addToGlobal} />
-        {Object.keys(this.state.globals).length !== 0 ? (
-          <BlocksGrid blocks={Blocks} addToResult={this.addToResult} />
-        ) : null}
-        <hr />
-        <Result
-          globals={this.state.globals}
-          result={this.state.result}
-          stack={this.state.stack}
-          openModal={this.openModalHandler}
-          updateResult={this.updateResult}
-        />
-        <br />
-        <button onClick={this.handleShowCode}>Transpile</button>
+      <div className="App row">
+        <div className="col s12 l4">
+          <Globals addToGlobal={this.addToGlobal} />
+          {Object.keys(this.state.globals).length !== 0 ? (
+            <BlocksGrid blocks={DataBlocks} addToResult={this.addToResult} />
+          ) : null}
+          <hr />
+        </div>
 
-        {this.state.showCode ? (
-          <div>
-            <br />
-            {this.state.finalCode}
+        <div className="col s12 l8">
+          <Result
+            globals={this.state.globals}
+            result={this.state.result}
+            stack={this.state.stack}
+            openModal={this.openModalHandler}
+            updateResult={this.updateResult}
+          />
+
+          <div className="row">
+            <div className="col s12">
+              <br />
+              <button className="btn waves-effect" onClick={this.handleShowCode}>Transpile</button>
+            </div>
           </div>
-        ) : null}
+
+          {this.state.showCode ? (
+            <div>
+              <br />
+              {this.state.finalCode}
+            </div>
+          ) : null}
+        </div>
 
         {this.state.isModalOpen ? (
           <div onClick={this.closeModalHandler} className="back-drop" />

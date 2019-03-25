@@ -1,9 +1,16 @@
+body{
+  font-family: 'Roboto',sans-serif;
+  font-size: 16px;
+  padding-top: 30px;
+}
+
 .edit-layer {
   display: none;
 }
 .edit-layer button {
   margin-right: 15px;
 }
+
 #mainTable tr td table:hover .edit-layer {
   display: block;
   position: absolute;
@@ -11,4 +18,10 @@
 
 .edit-button {
   position: absolute;
+  margin: -15px;
+}
+
+.edit-button .btn-floating {
+  font-size: 26px;
+  font-weight: bold;
 }
