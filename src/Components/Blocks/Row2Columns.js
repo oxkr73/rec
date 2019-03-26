@@ -40,6 +40,7 @@ class Row2Columns extends Component {
                         <td className="center noPadding" style={{ padding: "10px 10px 0" }}
                             onMouseOver={this.handleShow}
                             onMouseLeave={this.handleHide}>
+
                             {removeBtn}
 
                             <table width="48%" border="0" cellPadding="0" cellSpacing="0" align="left" className={this.props.globals.isResponsive ? "deviceWidth" : null}>
@@ -48,7 +49,7 @@ class Row2Columns extends Component {
                                         <td align="center">
                                             <p style={{ msoTableLspace: 0, msoTableRspace: 0, margin: 0 }}>
                                                 <a href="/">
-                                                    <img width="267" src="https://placehold.it/265x160?text=IMAGE" alt="" border="0" className={this.props.globals.isResponsive ? "deviceWidth" : null} />
+                                                    <img width="252" src="https://placehold.it/252x150?text=IMAGE" style={{ width: "252px" }} alt="" border="0" className={this.props.globals.isResponsive ? "deviceWidth" : null} />
                                                 </a>
                                             </p>
                                         </td>
@@ -78,7 +79,7 @@ class Row2Columns extends Component {
                                         <td align="center">
                                             <p style={{ msoTableLspace: 0, msoTableRspace: 0, margin: 0 }}>
                                                 <a href="/">
-                                                    <img width="267" src="https://placehold.it/265x160?text=IMAGE" alt="" border="0" className={this.props.globals.isResponsive ? "deviceWidth" : null} />
+                                                    <img width="252" src="https://placehold.it/252x150?text=IMAGE" style={{ width: "252px" }} alt="" border="0" className={this.props.globals.isResponsive ? "deviceWidth" : null} />
                                                 </a>
                                             </p>
                                         </td>

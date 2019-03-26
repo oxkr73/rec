@@ -42,7 +42,9 @@ class Row1Button extends Component {
                         <td width="100%" bgcolor="#ffffff" style={{ padding: "15px 0" }}
                             onMouseOver={this.handleShow}
                             onMouseLeave={this.handleHide}>
+
                             {removeBtn}
+
                             <table
                                 border="0"
                                 cellPadding="0"
@@ -52,7 +54,7 @@ class Row1Button extends Component {
                                 <tbody>
                                     <tr>
                                         <td
-                                            style={{ padding: "15px 30px" }}
+                                            style={{ padding: "15px 30px", textAlign: "center" }}
                                             bgcolor="#dddddd"
                                             className="center"
                                         >

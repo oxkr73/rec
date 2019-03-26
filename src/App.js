@@ -109,7 +109,7 @@ class App extends Component {
           <div className="row">
             <div className="col s12">
               <br />
-              <button className="btn waves-effect" onClick={this.handleShowCode}>Transpile</button>
+              <button className="btn waves-effect" onClick={this.handleShowCode}>Code</button>
             </div>
           </div>
 

@@ -6,7 +6,12 @@ import FullWidthImage from "./Blocks/FullWidthImage";
 import FullWidthText from "./Blocks/FullWidthText";
 import Spacer from "./Blocks/Spacer";
 import Row1Button from "./Blocks/Row1Button";
+import Row2Buttons from "./Blocks/Row2Buttons";
 import Row2Columns from "./Blocks/Row2Columns";
+import Row4Elements from "./Blocks/Row4Elements";
+import List3Center from "./Blocks/List3Center";
+import FullWidthFooter from "./Blocks/FullWidthFooter";
+import Row2Boxes from "./Blocks/Row2Boxes";
 
 class Result extends Component {
   state = {};
@@ -105,9 +110,69 @@ class Result extends Component {
                     />
                   );
                 }
+                if (item.value === "Row2Buttons") {
+                  return (
+                    <Row2Buttons
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
+                    />
+                  );
+                }
                 if (item.value === "Row2Columns") {
                   return (
                     <Row2Columns
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
+                    />
+                  );
+                }
+                if (item.value === "Row4Elements") {
+                  return (
+                    <Row4Elements
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
+                    />
+                  );
+                }
+                if (item.value === "List3Center") {
+                  return (
+                    <List3Center
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
+                    />
+                  );
+                }
+                if (item.value === "FullWidthFooter") {
+                  return (
+                    <FullWidthFooter
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
+                    />
+                  );
+                }
+                if (item.value === "Row2Boxes") {
+                  return (
+                    <Row2Boxes
                       key={key}
                       id={key + "-" + item.slug}
                       globals={this.props.globals}
