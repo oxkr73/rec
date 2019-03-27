@@ -107,19 +107,13 @@ const Layout = {
                 .center {
                     text-align: center !important;
                 }
-    
+
                 .noPadding {
                     padding: 0 !important;
                 }
     
-                .leftAlignMblImg {
-                    width: 50px !important;
-                    text-align: left !important;
-                }
-    
-                .leftAlignMblText {
-                    width: 80% !important;
-                    text-align: left !important;
+                .fullWidth {
+                    width: 100% !important;
                 }
     
                 .hiddenMbl {

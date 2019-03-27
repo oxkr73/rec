@@ -12,6 +12,7 @@ import Row4Elements from "./Blocks/Row4Elements";
 import List3Center from "./Blocks/List3Center";
 import FullWidthFooter from "./Blocks/FullWidthFooter";
 import Row2Boxes from "./Blocks/Row2Boxes";
+import Columns2Text from "./Blocks/Columns2Text";
 
 class Result extends Component {
   state = {};
@@ -173,6 +174,18 @@ class Result extends Component {
                 if (item.value === "Row2Boxes") {
                   return (
                     <Row2Boxes
+                      key={key}
+                      id={key + "-" + item.slug}
+                      globals={this.props.globals}
+                      blockProps={item.blockProps}
+                      openModal={this.props.openModal}
+                      updateResult={this.props.updateResult}
+                    />
+                  );
+                }
+                if (item.value === "Columns2Text") {
+                  return (
+                    <Columns2Text
                       key={key}
                       id={key + "-" + item.slug}
                       globals={this.props.globals}

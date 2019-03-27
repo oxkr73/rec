@@ -39,7 +39,7 @@ class Spacer extends Component {
           <tr>
             <td height="15" style={{ fontSize: "15px", lineHeight: "15px" }}
               onMouseEnter={this.handleShow}
-            //onMouseOut={this.handleHide}
+              onMouseOut={this.handleHide}
             >
               {removeBtn}
               &nbsp;

@@ -536,6 +536,89 @@ const Blocks = [{
   }
 },
 {
+  label: "2 Columns Text Below",
+  value: "Columns2Text",
+  slug: "C2T",
+  html: `	<table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#ffffff"
+  style="margin:0 auto;">
+  <tr>
+    <td class="center noPadding" style="padding:0 15px;width: 100%;">
+      <table width="48%" border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth">
+        <tr>
+          <td
+            style="font-size: 14px; color: #959595; font-weight: normal; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 17px; vertical-align: top; padding: 15px 15px 0; width: 100%;">
+            <table border="0" cellpadding="0" cellspacing="0" class="fullWidth">
+              <tr>
+                <td bgcolor="#dddddd" style="padding: 10px;">
+                  <table border="0" cellpadding="0" cellspacing="0" align="left"
+                    style="width:100%;text-align: center">
+                    <tr>
+                      <td valign="top">
+                        <img src="https://placehold.it/50x50?text=IMAGE" alt=""
+                          border="0" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top"
+                        style="font-size: 14px; color: #000000; font-weight: normal; font-family: Arial, Helvetica, sans-serif; line-height: 17px; vertical-align: top;padding:0 10px">
+                        <a href="/"
+                          style="text-decoration: none; font-size: 16px;line-height:19px; color: #000000; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">
+                          Two column - text below</a><br />
+                        Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                        occaecat
+                        cupidatat non proident.
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table width="48%" border="0" cellpadding="0" cellspacing="0" align="right" class="deviceWidth">
+        <tr>
+          <td
+            style="font-size: 14px; color: #959595; font-weight: normal; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 17px; vertical-align: top; padding: 15px 15px 0; width: 100%;">
+            <table border="0" cellpadding="0" cellspacing="0" class="fullWidth">
+              <tr>
+                <td bgcolor="#dddddd" style="padding: 10px;">
+                  <table border="0" cellpadding="0" cellspacing="0" align="left"
+                    style="width:100%;text-align: center">
+                    <tr>
+                      <td valign="top">
+                        <img src="https://placehold.it/50x50?text=IMAGE" alt=""
+                          border="0" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top"
+                        style="font-size: 14px; color: #000000; font-weight: normal; font-family: Arial, Helvetica, sans-serif; line-height: 17px; vertical-align: top;padding:0 10px">
+                        <a href="/"
+                          style="text-decoration: none; font-size: 16px;line-height:19px; color: #000000; font-weight: bold; font-family:Arial, Helvetica, sans-serif;">
+                          Two column - text below</a><br />
+                        Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                        occaecat
+                        cupidatat non proident.
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>`,
+  blockProps: {
+    bkgColor: "",
+    padding: "0",
+    textAlign: "left"
+  }
+},
+{
   label: "Spacer",
   value: "Spacer",
   slug: "SPC",
