@@ -123,7 +123,6 @@ const Blocks = [{
                     </td>
                   </tr>
                 </table>
-
               </td>
             </tr>
           </table>`,
@@ -514,28 +513,6 @@ const Blocks = [{
   }
 },
 {
-  label: "Full width Footer",
-  value: "FullWidthFooter",
-  slug: "FWF",
-  html: `<table width="600" class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center"
-          style="margin:0 auto;">
-          <tr>
-            <td
-              style="font-size: 10px; color: #666666; font-weight: normal; text-align: left; font-style: italic; font-family: Arial, Helvetica, sans-serif; line-height: 13px; vertical-align: top; padding:15px 0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sodales aliquet. Maecenas
-              rutrum metus id accumsan convallis. Ut pharetra, libero in rhoncus efficitur, ante elit tincidunt nisi,
-              quis varius arcu velit vitae eros. Proin varius, ipsum ut fermentum tincidunt, mauris mi finibus ligula,
-              a varius mauris ex et leo. Cras et urna ullamcorper, iaculis nibh vitae, imperdiet volutpat.
-            </td>
-          </tr>
-        </table>`,
-  blockProps: {
-    bkgColor: "",
-    padding: "0",
-    textAlign: "left"
-  }
-},
-{
   label: "2 Columns Text Below",
   value: "Columns2Text",
   slug: "C2T",
@@ -630,6 +607,28 @@ const Blocks = [{
             </table>`,
   blockProps: {
     height: "15"
+  }
+},
+{
+  label: "Full width Footer",
+  value: "FullWidthFooter",
+  slug: "FWF",
+  html: `<table width="600" class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center"
+          style="margin:0 auto;">
+          <tr>
+            <td
+              style="font-size: 10px; color: #666666; font-weight: normal; text-align: left; font-style: italic; font-family: Arial, Helvetica, sans-serif; line-height: 13px; vertical-align: top; padding:15px 0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sodales aliquet. Maecenas
+              rutrum metus id accumsan convallis. Ut pharetra, libero in rhoncus efficitur, ante elit tincidunt nisi,
+              quis varius arcu velit vitae eros. Proin varius, ipsum ut fermentum tincidunt, mauris mi finibus ligula,
+              a varius mauris ex et leo. Cras et urna ullamcorper, iaculis nibh vitae, imperdiet volutpat.
+            </td>
+          </tr>
+        </table>`,
+  blockProps: {
+    bkgColor: "",
+    padding: "0",
+    textAlign: "left"
   }
 }
 ];
