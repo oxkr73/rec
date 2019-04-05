@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import M from "materialize-css";
-import "../../node_modules/materialize-css/dist/css/materialize.css"
+import materialize from "../../node_modules/materialize-css/dist/css/materialize.css"
 
 class Globals extends Component {
   state = {};
@@ -34,7 +34,7 @@ class Globals extends Component {
 
   render() {
     return (
-      <div className="row">
+      <div className={materialize.row}>
         <form className="col s12" onSubmit={this.modifyGlobal}>
           <div className="row">
             <div className="input-field col s4">
