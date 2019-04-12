@@ -1,3 +1,17 @@
 .grid-blocks button.btn {
-    margin: 0 10px 10px 0;
+    margin: 10px 10px 0 0;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;   
+    width: 120px;
+    height: 60px;
+    line-height: 0;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    font-size: 10px;
+}
+
+.Row1Logo{
+    background: url(../Assets/img/Row1Logo.png);
+    background-size: 100%;
 }

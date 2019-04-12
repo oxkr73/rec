@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import M from "materialize-css";
-import materialize from "../../node_modules/materialize-css/dist/css/materialize.css"
+//import M from "materialize-css";
+//import mater from "./Materialize";
+import cx from 'classnames';
+import globalStyles from '../Assets/global-styles/bootstrap.min.module.css';
 
 class Globals extends Component {
   state = {};
@@ -29,66 +31,72 @@ class Globals extends Component {
   };
 
   componentDidMount() {
-    M.AutoInit();
+    //console.log(bootstrap)
+    //M.AutoInit();
   }
 
   render() {
     return (
-      <div className={materialize.row}>
-        <form className="col s12" onSubmit={this.modifyGlobal}>
-          <div className="row">
-            <div className="input-field col s4">
+      <div className={globalStyles.row}>
+        <form className={cx(globalStyles.col)} onSubmit={this.modifyGlobal}>
+          <div className={globalStyles.row}>
+            <div className={cx(globalStyles["form-group"], globalStyles["col-4"])}>
+              <label htmlFor="global-bkg">Background color</label>
               <input
+                className={globalStyles["form-control"]}
                 ref={this.globalBkg}
                 id="global-bkg"
                 type="text"
                 name="global-bkg"
-                defaultValue="#dedede"
+                defaultValue="#eeeeee"
               />
-              <label htmlFor="global-bkg">Background color</label>
             </div>
-            <div className="input-field col s4">
+            <div className={cx(globalStyles["form-group"], globalStyles["col-4"])}>
+              <label htmlFor="global-table-color">Table bkg color</label>
               <input
+                className={globalStyles["form-control"]}
                 ref={this.globalTableBkg}
                 id="global-table-color"
                 type="text"
                 name="global-table-color"
                 defaultValue="#ffffff"
               />
-              <label htmlFor="global-table-color">Table bkg color</label>
             </div>
-            <div className="input-field col s4">
+            <div className={cx(globalStyles["form-group"], globalStyles["col-4"])}>
+              <label htmlFor="global-width">Width</label>
               <input
+                className={globalStyles["form-control"]}
                 ref={this.globalWidth}
                 id="global-width"
                 type="number"
                 name="global-width"
                 defaultValue="600"
               />
-              <label htmlFor="global-width">Width</label>
             </div>
           </div>
 
-          <div className="row">
-            <div className="input-field col s4">
+          <div className={globalStyles.row}>
+            <div className={cx(globalStyles["form-group"], globalStyles["col-4"])}>
+              <label htmlFor="body-pad-top">Body Pad-Top</label>
               <input
+                className={globalStyles["form-control"]}
                 ref={this.bodyPaddingTop}
                 id="body-pad-top"
                 type="number"
                 name="body-pad-top"
                 defaultValue="15"
               />
-              <label htmlFor="body-pad-top">Body Padding Top</label>
             </div>
-            <div className="input-field col s4">
+            <div className={cx(globalStyles["form-group"], globalStyles["col-4"])}>
+              <label htmlFor="body-pad-bottom">Body Pad-Bottom</label>
               <input
+                className={globalStyles["form-control"]}
                 ref={this.bodyPaddingBottom}
                 id="body-pad-bottom"
                 type="number"
                 name="body-pad-bottom"
                 defaultValue="15"
               />
-              <label htmlFor="body-pad-bottom">Body Padding Bottom</label>
             </div>
             {/* <div className="form-group">
           <label>Align</label>
@@ -102,27 +110,28 @@ class Globals extends Component {
             <option value="right">right</option>
           </select>
         </div> */}
-            <div className="col s4">
-              <label>
+            <div className={cx(globalStyles["form-group"], globalStyles["col-4"])}>
+              <div className={globalStyles["form-check"]}>
                 <input
                   ref={this.isResponsive}
                   id="responsive"
                   type="checkbox"
                   name="responsive"
                   defaultChecked="true"
-                  className="filled-in"
+                  className={globalStyles["form-check-input"]}
                 />
-                <span htmlFor="responsive">Responsive</span>
-              </label>
+                <label htmlFor="responsive" className={globalStyles["form-check-label"]}> Responsive</label>
+              </div>
             </div>
+
           </div>
-          <div className="row">
-            <div className="col s12">
-              <button className="btn waves-effect">Apply</button>
+          <div className={globalStyles.row}>
+            <div className={globalStyles["col-sm"]}>
+              <button className={cx(globalStyles.btn, globalStyles["btn-primary"])}>Apply</button>
             </div>
           </div>
         </form>
-      </div>
+      </div >
     );
   }
 }

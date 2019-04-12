@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import cx from "classnames";
 
 class Block extends Component {
   state = {};
@@ -6,7 +7,9 @@ class Block extends Component {
     this.props.addToResult(this.props.dataBlock);
   };
   render() {
-    return <button className="btn waves-effect" onClick={this.handleClick}>{this.props.dataBlock.label}</button>;
+    return (<button className={cx("btn", this.props.dataBlock.value)} onClick={this.handleClick}>
+      {this.props.dataBlock.label}
+    </button>);
   }
 }
 

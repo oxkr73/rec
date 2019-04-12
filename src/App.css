@@ -24,4 +24,5 @@ body{
 .edit-button .btn-floating {
   font-size: 26px;
   font-weight: bold;
+  background-color: red;
 }
