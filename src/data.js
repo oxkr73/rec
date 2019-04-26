@@ -596,6 +596,110 @@ const Blocks = [{
   }
 },
 {
+  label: "2 Columns Text Image",
+  value: "TextAndImage",
+  slug: "TAI",
+  html: `<table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#eeeeed" style="margin:0 auto;">
+  <tr>
+    <td style="padding:10px 0">
+                      <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                          <tr>
+                              <td valign="top" align="right" class="center" style="padding:20px 10px 0 0">
+              <p style="mso-table-lspace:0;mso-table-rspace:0; margin:0"><a href="#"><img width="267" src="https://placehold.it/267x100?text=IMAGE" alt="" border="0" style="border-radius: 4px; width: 267px; display: block;" class="deviceWidth" /></a></p>
+                              </td>
+                          </tr>
+                      </table>
+                      <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                          <tr>
+                              <td style="font-size: 13px; color: #959595; font-weight: normal; text-align: left; font-family: Georgia, Times, serif; line-height: 24px; vertical-align: top; padding:20px 0 20px 15px">
+
+                                  <table>
+                                      <tr>
+                                          <td valign="top" style="padding:0 10px 15px 0">
+                                              <img  src="https://placehold.it/40x40?text=IMAGE" alt="" border="0" align="left" />
+                                          </td>
+                                          <td valign="middle" style="padding:0 10px 10px 0"><a href="#" style="text-decoration: none; font-size: 16px; color: #363636; font-weight: bold; font-family:Arial, sans-serif ">Two column - text left</a>
+                                          </td>
+                                      </tr>
+                                  </table>
+
+                                  <p style="mso-table-lspace:0;mso-table-rspace:0; margin:0">
+                                      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.
+                                      <br/><br/>
+
+                                  </p>
+                              </td>
+                          </tr>
+                      </table>
+              </td>
+          </tr>
+      </table>`,
+  blockProps: {
+  }
+},
+{
+  label: "2 Columns Image and Text",
+  value: "ImageAndText",
+  slug: "IAT",
+  html: `<table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" bgcolor="#202022" style="margin:0 auto;">
+  <tr>
+      <td style="padding:10px 0">
+              <table align="left" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                  <tr>
+                      <td valign="top" align="center" class="center" style="padding-top:20px">
+                              <a href="#"><img width="267" src="https://placehold.it/267x100?text=IMAGE" alt="" border="0" style="border-radius: 4px; width: 267px; display: block;" class="deviceWidth" /></a>
+                      </td>
+                  </tr>
+              </table>
+              <table align="right" width="49%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                  <tr>
+                      <td style="font-size: 12px; color: #959595; font-weight: normal; text-align: left; font-family: Georgia, Times, serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px">
+
+                          <table>
+                              <tr>
+                                  <td valign="top" style="padding:0 10px 10px 5px">
+                                      <img  src="https://placehold.it/40x40?text=IMAGE" alt="" border="0" align="left" />
+                                  </td>
+                                  <td valign="middle" style="padding:0 10px 10px 0"><a href="#" style="text-decoration: none; font-size: 16px; color: #ccc; font-weight: bold; font-family:Arial, sans-serif ">Two column - text right</a>
+                                  </td>
+                              </tr>
+                          </table>
+
+                          <p style="mso-table-lspace:0;mso-table-rspace:0; margin:0">
+                              Sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.
+                              <br/><br/>
+
+                              <table width="100" align="right">
+                                  <tr>
+                                      <td bgcolor="#409ea8" style="padding:5px 0;background-color:#409ea8; border-top:1px solid #77d5ea;" align="center">
+                                          <a href=""
+                                          style="
+                                          color:#ffffff;
+                                          font-size:13px;
+                                          font-weight:bold;
+                                          text-align:center;
+                                          text-decoration:none;
+                                          font-family:Arial, sans-serif;
+                                          -webkit-text-size-adjust:none;">
+                                                  Read More
+                                          </a>
+
+                                      </td>
+                                  </tr>
+                              </table>
+
+                          </p>
+                      </td>
+                  </tr>
+              </table>
+
+      </td>
+  </tr>
+</table>`,
+  blockProps: {
+  }
+},
+{
   label: "Spacer",
   value: "Spacer",
   slug: "SPC",
